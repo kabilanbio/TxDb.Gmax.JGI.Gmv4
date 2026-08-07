@@ -10,26 +10,25 @@
 ###
 
 meta <- data.frame(
-    Title = "TxDb.Osativa.MSU.RGAP7",
-    Description = "Transcript Annotation Database for Rice",
+    Title = "TxDb.Gmax.JGI.Gmv4",
+    Description = "Transcript Annotation Database for Soybean",
     BiocVersion = "3.24",
-    Genome = "IRGSP-1.0",
+    Genome = "Wm82.a4.v1",
     SourceType = "GFF",
-    SourceVersion = "7",
-    SourceUrl = paste0("https://rice.uga.edu/pub/data/Eukaryotic_Projects/",
-                       "o_sativa/annotation_dbs/pseudomolecules/version_7.0/",
-                       "all.dir/all.gff3"),
-    Species = "Oryza sativa",
-    TaxonomyId = 4530L,
+    SourceVersion = "Wm82.a4.v1",
+    SourceUrl = paste0("https://data.jgi.doe.gov/refine-download/phytozome",
+                       "?organism=Gmax&expanded=508&phytozome_version=14"),
+    Species = "Glycine max",
+    TaxonomyId = 3847L,
     Coordinate_1_based = TRUE,
-    DataProvider = "Rice Annotation Genome Project",
+    DataProvider = "JGI/Phytozome",
     Maintainer = "Kabilan S <kabilan151414@gmail.com>",
     RDataClass = "TxDb",
     DispatchClass = "SQLiteFile",
     Location_Prefix = "https://zenodo.org/",
-    RDataPath = "records/21783295/files/TxDb.Osativa.MSU.RGAP7.sqlite",
+    RDataPath = "records/20702344/files/TxDb.Gmax.Wm82.a4.sqlite",
     ## Tags are colon separated, see ?AnnotationHubData::makeAnnotationHubMetadata
-    Tags = paste("AnnotationData", "TxDb", "Oryza sativa",
+    Tags = paste("AnnotationData", "TxDb", "Glycine max",
                  "SequenceAnnotation", "AnnotationHub", sep = ":"),
     stringsAsFactors = FALSE
 )

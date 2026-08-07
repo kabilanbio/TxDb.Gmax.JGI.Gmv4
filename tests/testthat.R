@@ -1,4 +1,4 @@
 library(testthat)
-library(TxDb.Osativa.MSU.RGAP7)
+library(TxDb.Gmax.JGI.Gmv4)
 
-test_check("TxDb.Osativa.MSU.RGAP7")
+test_check("TxDb.Gmax.JGI.Gmv4")

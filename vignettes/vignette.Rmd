@@ -12,12 +12,14 @@ vignette: >
 # Introduction
 
 **TxDb.Gmax.JGI.Gmv4** is a Bioconductor-compatible transcript annotation
-package for *Glycine max* generated from the official **JGI/Phytozome GFF3 annotation** GFF3 annotation based on the **Glycine max Wm82.a4.v1** reference genome.
+package for *Glycine max* generated from the official **JGI/Phytozome GFF3
+annotation** of the **Glycine max Wm82.a4.v1** reference genome.
 
 The package provides genomic coordinates and transcript models, including genes,
 transcripts, exons, coding sequences (CDS), and promoter regions. It is intended
 for downstream genomic analyses using Bioconductor packages such as
-**GenomicFeatures**, **GenomicRanges**, **Signac**, **ArchR**, and **ChIPseeker**.
+**GenomicFeatures**, **GenomicRanges**, **Signac**, **ArchR**, and
+**ChIPseeker**.
 
 The TxDb object itself is not shipped inside the package; it is hosted on
 **AnnotationHub** and downloaded on first use.
@@ -41,7 +43,8 @@ library(GenomicFeatures)
 ```
 
 ```{r downloading}
-# Downloading the TxDb file from AnnotationHub
+# Downloading the TxDb file from AnnotationHub. Run
+# query(ah, "TxDb.Gmax.JGI.Gmv4") to look up the AH accession.
 TxDb.Gmax.JGI.Gmv4 <- tryCatch({
     ah <- AnnotationHub()
     ah[["AHxxxxxx"]]
@@ -71,13 +74,14 @@ seqinfo(TxDb.Gmax.JGI.Gmv4)
 ```{r avl_chromosomes}
 seqlevels(TxDb.Gmax.JGI.Gmv4)
 ```
-The 20 nuclear chromosomes of the Glycine max Wm82.a4.v1 assembly. These contain the vast majority of annotated genes. 
+The 20 nuclear chromosomes of the Glycine max Wm82.a4.v1 assembly. These
+contain the vast majority of annotated genes.
 
 # Gene annotations
 
 Retrieve all annotated genes.
 
-```{r gene_annotations} 
+```{r gene_annotations}
 genes(TxDb.Gmax.JGI.Gmv4)
 ```
 
@@ -101,7 +105,8 @@ head(cds(TxDb.Gmax.JGI.Gmv4))
 
 # Promoter regions
 
-Extract promoter regions 2 kb upstream and 200 bp downstream of transcription start sites.
+Extract promoter regions 2 kb upstream and 200 bp downstream of transcription
+start sites.
 
 ```{r promoters}
 head(promoters(

@@ -7,7 +7,7 @@ Authors@R:
              role="aut",
              email="dwij.mishra@gmail.com",
              comment=c(ORCID="0000-0002-3327-6156")),
-      person("Sharanbasappa", "D", "Madival"
+      person("Sharanbasappa D.", "Madival",
              role="aut",
              email="smadival509@gmail.com",
              comment=c(ORCID="0000-0002-6571-9070")),
@@ -29,8 +29,6 @@ Description:
     by JGI/Phytozome locus IDs.
 Depends:
     R (>= 4.6.0)
-Imports:
-    stats
 Suggests:
     AnnotationHub,
     BiocManager,
@@ -54,4 +52,3 @@ biocViews:
     SequenceAnnotation,
     AnnotationHub
 Config/testthat/edition: 3
-Config/roxygen2/version: 8.1.0

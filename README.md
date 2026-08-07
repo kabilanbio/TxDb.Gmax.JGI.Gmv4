@@ -1,6 +1,6 @@
-# TxDb.Osativa.MSU.RGAP7
+# TxDb.Gmax.JGI.Gmv4
 
-TxDb.Osativa.MSU.RGAP7 is a Bioconductor-compatible transcript annotation database generated from the official MSU Rice Genome Annotation Project Release 7 (RGAP7) GFF3 annotation. It provides gene, transcript, exon, CDS, and genomic feature annotations for Oryza sativa (Nipponbare, IRGSP-1.0/MSU7).
+TxDb.Gmax.JGI.Gmv4 is a Bioconductor-compatible transcript annotation database generated from the official JGI/Phytozome GFF3 annotation of soybean (Glycine max, accession Wm82.a4.v1). It provides gene, transcript, exon, CDS, and promoter annotations for the 20 nuclear chromosomes of the Wm82.a4.v1 assembly.
 
 ## Installation
 
@@ -21,7 +21,8 @@ library(AnnotationHub)
 library(GenomicFeatures)
 
 ah <- AnnotationHub()
-txdb <- ah[["AH122276"]]
+query(ah, "TxDb.Gmax.JGI.Gmv4")   # look up the AH accession
+txdb <- ah[["AHxxxxxx"]]          # replace with the accession printed above
 
 genes(txdb)
 head(transcripts(txdb))
@@ -31,5 +32,5 @@ exonsBy(txdb, by = "tx")
 See the vignette for a full walkthrough:
 
 ```r
-vignette("vignette", package = "TxDb.Osativa.MSU.RGAP7")
+vignette("vignette", package = "TxDb.Gmax.JGI.Gmv4")
 ```
