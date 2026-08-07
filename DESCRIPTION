@@ -1,0 +1,57 @@
+Package: TxDb.Gmax.JGI.Gmv4
+Title: Transcripts Annotation Database for Soybean
+Version: 0.99.0
+Authors@R:
+    c(
+      person("Dwijesh Chandra", "Mishra",
+             role="aut",
+             email="dwij.mishra@gmail.com",
+             comment=c(ORCID="0000-0002-3327-6156")),
+      person("Sharanbasappa", "D", "Madival"
+             role="aut",
+             email="smadival509@gmail.com",
+             comment=c(ORCID="0000-0002-6571-9070")),
+      person("Kabilan", "S",
+             role=c("aut","cre"),
+             email="kabilan151414@gmail.com",
+             comment=c(ORCID="0009-0002-9422-0938")),
+      person("ICAR-IARI",
+             role="fnd",
+             email="info@iari.res.in")
+    )
+Description:
+    TxDb.Gmax.JGI.Gmv4 provides transcript, exon, and CDS annotations 
+    for soybean (Glycine max Wm82.a4.v1). It is a Bioconductor TxDb 
+    object built from the official JGI/Phytozome GFF3 annotation and 
+    is available via AnnotationHub (retrievable with AnnotationHub()); 
+    after loading you can use GenomicFeatures accessors (genes(), 
+    transcripts(), exonsBy(), cdsBy()) to extract gene models identified 
+    by JGI/Phytozome locus IDs.
+Depends:
+    R (>= 4.6.0)
+Imports:
+    stats
+Suggests:
+    AnnotationHub,
+    BiocManager,
+    BiocStyle,
+    GenomicFeatures,
+    GenomicRanges,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+License: Artistic-2.0
+Encoding: UTF-8
+URL:
+    https://github.com/kabilanbio/TxDb.Gmax.JGI.Gmv4
+BugReports:
+    https://github.com/kabilanbio/TxDb.Gmax.JGI.Gmv4/issues
+biocViews:
+    AnnotationData,
+    TxDb,
+    Glycine_max,
+    SequenceAnnotation,
+    AnnotationHub
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
