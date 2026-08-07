@@ -10,15 +10,18 @@
 \title{Annotation package for TxDb object(s)}
 
 \description{
-  This package loads a TxDb object for \emph{Glycine max} based on the
-  Rice Genome Annotation Project (RGAP) Release 7 annotation (MSU7).
-  The TxDb object provides transcript, exon, CDS and gene ranges
-  for the IRGSP-1.0 / MSU7 genome assembly.
+  TxDb.Gmax.JGI.Gmv4 provides transcript, exon, and CDS annotations
+  for soybean (Glycine max Wm82.a4.v1). It is a Bioconductor TxDb
+  object built from the official JGI/Phytozome GFF3 annotation and
+  is available via AnnotationHub (retrievable with AnnotationHub());
+  after loading you can use GenomicFeatures accessors (genes(),
+  transcripts(), exonsBy(), cdsBy()) to extract gene models identified
+  by JGI/Phytozome locus IDs.
 }
 
 \note{
-  This data package was built from the RGAP Release 7 GFF3 annotation
-  (MSU7, IRGSP-1.0).
+  This data package was built from the JGI/Phytozome GFF3 annotation of
+  soybean (Glycine max Wm82.a4.v1).
 }
 
 \author{

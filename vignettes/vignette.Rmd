@@ -23,38 +23,24 @@ The TxDb object itself is not shipped inside the package; it is hosted on
 **AnnotationHub** and downloaded on first use.
 
 ```{r eval=FALSE}
-# Installation
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
+# Install required Bioconductor packages
+if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-}
+
 BiocManager::install(c(
-    "AnnotationHub",
     "GenomicFeatures",
     "GenomicRanges"
 ))
 ```
 
-## Loading packages
-```{r loading, message=FALSE}
-library(AnnotationHub)
+# Loading the package
+
+```{r loading}
+library(TxDb.Gmax.JGI.Gmv4)
 library(GenomicFeatures)
 ```
 
-```{r downloading}
-# Downloading the TxDb file from AnnotationHub
-TxDb.Gmax.JGI.Gmv4 <- tryCatch({
-    ah <- AnnotationHub()
-    ah[["AHxxxxxx"]]
-}, error = function(e) NULL)
-```
-
-```{r gate, include=FALSE}
-## The remaining chunks need the downloaded resource; skip them when the
-## build machine has no network access or the resource is unavailable.
-knitr::opts_chunk$set(eval = !is.null(TxDb.Gmax.JGI.Gmv4))
-```
-
-# TxDb file summary
+# Package summary
 
 ```{r summary}
 TxDb.Gmax.JGI.Gmv4
