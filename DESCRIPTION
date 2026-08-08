@@ -7,7 +7,7 @@ Authors@R:
              role="aut",
              email="dwij.mishra@gmail.com",
              comment=c(ORCID="0000-0002-3327-6156")),
-      person("Sharanbasappa", "D", "Madival"
+      person("Sharanbasappa", "D", "Madival",
              role="aut",
              email="smadival509@gmail.com",
              comment=c(ORCID="0000-0002-6571-9070")),
@@ -30,13 +30,15 @@ Description:
 Depends:
     R (>= 4.6.0)
 Imports:
-    stats
+    AnnotationDbi,
+    DBI,
+    RSQLite,
+    rappdirs,
+    GenomicFeatures
 Suggests:
-    AnnotationHub,
     BiocManager,
     BiocStyle,
-    GenomicFeatures,
-    GenomicRanges,
+    GenomeInfoDb,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
