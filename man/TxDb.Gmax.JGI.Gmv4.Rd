@@ -44,7 +44,7 @@ ls('package:TxDb.Gmax.JGI.Gmv4')
 TxDb.Gmax.JGI.Gmv4
 
 ## retrieve all genes
-genes(TxDb.Gmax.JGI.Gmv4)
+GenomicFeatures::genes(TxDb.Gmax.JGI.Gmv4)
 }
 
 \keyword{package}
