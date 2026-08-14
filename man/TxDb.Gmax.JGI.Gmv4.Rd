@@ -36,15 +36,21 @@
 }
 
 \examples{
-## load the library
-## list the contents that are loaded into memory
-ls('package:TxDb.Gmax.JGI.Gmv4')
+## The TxDb object is downloaded from AnnotationHub, so this example is
+## only run when AnnotationHub is installed and the resource is
+## reachable.
+if (requireNamespace("AnnotationHub", quietly=TRUE)) {
+    txdb <- tryCatch({
+        ah <- AnnotationHub::AnnotationHub()
+        ah[["AH122288"]]
+    }, error=function(e) NULL)
 
-## show the db object that is loaded by calling its name
-TxDb.Gmax.JGI.Gmv4
-
-## retrieve all genes
-GenomicFeatures::genes(TxDb.Gmax.JGI.Gmv4)
+    if (!is.null(txdb)) {
+        txdb
+        ## retrieve all genes
+        GenomicFeatures::genes(txdb)
+    }
+}
 }
 
 \keyword{package}
