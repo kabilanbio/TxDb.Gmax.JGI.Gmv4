@@ -1,13 +1,13 @@
 Package: TxDb.Gmax.JGI.Gmv4
 Title: Transcripts Annotation Database for Soybean
-Version: 0.99.0
+Version: 0.99.1
 Authors@R:
     c(
       person("Dwijesh Chandra", "Mishra",
              role="aut",
              email="dwij.mishra@gmail.com",
              comment=c(ORCID="0000-0002-3327-6156")),
-     person("Kabilan", "S",
+      person("Kabilan", "S",
              role=c("aut","cre"),
              email="kabilan151414@gmail.com",
              comment=c(ORCID="0009-0002-9422-0938")),
